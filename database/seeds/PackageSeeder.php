@@ -18,7 +18,7 @@ class PackageSeeder extends Seeder
             $package->destination=$faker->city();
             $package->description=$faker->sentence(10);
             $package->duration=$faker->numberBetween(1, 21) . " days";
-            $package->hotel=$faker->word(3);
+            $package->hotel=$faker->randomElement(['Hilton', 'Sheraton', 'Holiday Inn', 'Corinthia', 'Marriott']);
             $package->price=$faker->numberBetween(59,999);
             $package->save();
         }
