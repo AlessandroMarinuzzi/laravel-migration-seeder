@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .travel_pack {
+  width: calc(100% / 4 - 1rem);
+  margin: 8px;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
+
+.container .travel_pack img {
+  width: 100%;
+}
+

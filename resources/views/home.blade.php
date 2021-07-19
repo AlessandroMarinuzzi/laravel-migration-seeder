@@ -1,71 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
 
-        <title>Laravel</title>
+@section('title', 'Packages')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
+@section('main_content')
+    <div class="container">
         @foreach($packages as $package)
-            <h1>{{$package->hotel}}</h1>
+        <div class="travel_pack">
+            <img src="{{$package->image_url}}" alt="" class="city">
+            <div class="details">
+                <h2 class="destination">{{$package->destination}}</h2>
+                <h3 class="hotel">{{$package->hotel}}</h3>
+                <p class="description">{{$package->description}}</p>
+                <div class="days-price_ratio">
+                    <span class="duration">{{$package->duration}}</span>
+                    <span class="price">{{$package->price}} &euro;</span>
+                </div>
+            </div>
+        </div>
         @endforeach
-    </body>
-</html>
+    </div>
+@endsection

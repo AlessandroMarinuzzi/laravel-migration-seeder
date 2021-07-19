@@ -1,0 +1,15 @@
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    .travel_pack{
+        width: calc(100% / 4 - 1rem);
+        margin: 8px;
+        padding: 5px;
+        border: 1px solid lightblue;
+        img{
+            width: 100%;
+        }
+    }
+}
